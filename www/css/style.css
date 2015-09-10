@@ -1,0 +1,30 @@
+.background-fon{
+     background: url(../img/background.jpg) 
+     no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        background-size: cover;
+  }
+
+.glav-ekran{
+	text-align: center;
+  	position:relative;
+	top:50%;
+	margin-top: -120px;
+}
+
+.l1{
+	padding-top: 30px;
+}
+
+.l2{
+	padding-top: 30px;
+}
+
+.l3{
+	padding-top: 30px;
+}
+
+.button-balanced.menu{
+	width: 70%;
+	max-width: 400px;
+}

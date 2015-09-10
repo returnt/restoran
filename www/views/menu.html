@@ -1,0 +1,25 @@
+<div ng-controller="menu" >
+	<ion-pane>
+		<!-- start header -->
+		<ion-header-bar class="bar bar-header bar-balanced">
+			
+			<button class="back_button"  ng-click="doTheBack()"> <i class="ion-arrow-left-a" style="font-size: 25px;"></i>
+			</button>
+
+			<h1 class="title" style="text-align:center; color: #ffffff; right:42px;">Меню</h1>
+
+		</ion-header-bar>
+		<!-- end header -->
+
+		<ion-content >
+			<div class="list" ng-repeat="val in menu" style="margin-bottom: 0px;">
+			<a class="item item-avatar" href="#/menu/dishes/{{val.cafe_db_menu_id}}">
+			<img src="http://cafe.returnt.ru/img/{{val.cafe_db_menu_img}}" height="150" width="150">
+
+				{{val.cafe_db_menu_menu}}
+			</a>
+			</div>
+		</ion-content>
+
+	</ion-pane>
+</div>

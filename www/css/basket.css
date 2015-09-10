@@ -1,0 +1,49 @@
+.text_sup{
+	margin-top: 1%;
+	text-align: center; 
+	font-style: italic;
+}
+
+.textarea, .adress{
+	border: 1px solid;  	
+}
+
+ /*-- order button --*/
+.button.button-balanced.order{
+	margin-top: 5%;
+	margin-left: 10%;
+	width: 80%;
+}
+
+.back_button{
+	background: none;
+    border: none;
+    color: #ffffff;
+}
+
+.message{
+	width: 100%; 
+	resize: none;
+}
+
+.successWindow, .attentionWindow{
+	text-align: center;
+	text-decoration: underline;
+	text-align: center;
+	/*text-decoration: underline;*/
+	color: #33cd5f;
+	margin-top: 3%;
+}
+
+.ion-arrow-left-a{
+	font-size: 25px;
+}
+
+.col{
+	font-style: italic;
+}
+
+.
+.name{
+
+}

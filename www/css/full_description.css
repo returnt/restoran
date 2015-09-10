@@ -1,0 +1,118 @@
+/* div with picture and counter */
+.counterPlusPicture{
+    width: 100%;
+    height: 230px;
+    display: block;
+    color: red;
+    /*position: relative;*/
+}
+
+/* div for counter */
+.blokCounter{
+    width: 20%;
+    height: 200px;
+    float: right;
+    /*background: green;*/
+    position: relative;
+    text-align: center;
+}
+
+/* number between arrows */
+.numCounter{
+    font-size: 25px;
+    color: #169900;
+    font-weight: bold;
+}
+
+
+/*----------- DIV for dish picture ---------- */
+
+/* picture of the dish */
+.blokPicture{
+    width: 80%;
+    height: 200px;
+    float: left;
+    /*text-align: center; */
+    position: relative;
+    /*background: red;*/
+    padding: 2% 0 2% 2%;
+}
+
+/* img */
+.kartinka{
+    height: 100%;
+    width: 100%;
+}
+
+/*-----------END DIV for dish picture ---------- */
+
+
+
+
+/*----------- DIV for up and down buttons ---------- */
+
+    /*====button UP with icon===== */
+
+/* button */
+.btnUp{
+    width: 100%;
+    font-size: 50%;
+}
+
+/* icon */
+.ion-chevron-up{
+    font-size: 45px;
+    color: #666666;
+    font-weight: bold;
+}
+
+    /*======= end ======= */
+
+
+    /*========button DOWN with icon========= */
+
+/* button */
+.btnDown{
+    /*float: right;*/
+    width: 100%;
+    font-size: 50%;
+}
+
+/* icon */
+.ion-chevron-down{
+    /*margin-left: -20px;*/
+    font-size: 95px;
+    color: #666666;
+}
+
+    /*========= end ======== */
+
+/*----------- END DIV for up and down buttons---------- */
+
+
+
+/* description of the meal */
+.descriptionBluda{
+    margin: 4%;
+}
+
+
+
+/*----------------- animation -------------------*/
+
+/* animation for order button */
+.animated{
+    animation-name: fadeOutDown;
+}
+
+/* animation for title */
+.anima{
+    animation-name: flip;
+    animation-duration: 2s;
+}
+
+/* text that will be shown after click on the order button */
+.textZaKnopkoy{
+    position: relative;
+    vertical-align: middle;
+}

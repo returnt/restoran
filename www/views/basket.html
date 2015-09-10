@@ -1,0 +1,76 @@
+<div ng-controller="basketCtrl">
+    <ion-pane>
+        <ion-header-bar class="bar bar-header bar-balanced">
+            <button class="back_button" ng-click="doTheBack()">
+                <i class="ion-arrow-left-a"></i>
+            </button>
+            <h1 class="title" style="text-align:center; color: #ffffff;">Корзина</h1>
+        </ion-header-bar>
+        <ion-nav-view animation="slide-left-right"></ion-nav-view>
+        <ion-content>
+            <!-- order form -->
+            <form ng-submit="submit()">
+                <div class="item item-text-wrap">
+                    <div class="row">
+                        <div class="col col-65"><b> Сумма заказа: </b></div>
+                        <div class="col"><b> {{ cost }} руб. </b></div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-65"><b> Кол-во блюд: </b></div>
+                        <div class="col"><b> {{ sumFoods }} </b></div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-65"><b> Время доставки: </b></div>
+                        <div class="col"><b> {{ times }} мин. </b></div>
+                    </div>
+                    <div class="adress" style="margin-bottom:1%">
+                        <label class="item item-input">
+                            <input required type="text" size="100" style="width: 100%;" placeholder="Введите адрес доставки:" ng-model="adres">
+                        </label>
+                    </div>
+                    <div class="text_sup">
+                        <span>Текстовое сопровождение:</span>
+                    </div>
+                    <div class="textarea">
+                        <label class="item item-input">
+                            <textarea style="width: 100%; resize: none" rows="5" name="text" placeholder="Например: Вы можите указать особености проезда к месту доставки. Так же указать кол-во: салфеток, специй и тд. Это поле не обязательно к заполнению!"></textarea>
+                        </label>
+                    </div>
+                    <!--attention window of successful sending email-->
+                    <div class="successWindow" ng-show="successWindow">
+                        <div class='ng-modal-dialog'>
+                            <div class='ng-modal-dialog-content'>
+                                <span> Ваша заявка оформлена, ожидайте доставку! </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--attention window-->
+                    <div class="attentionWindow" ng-show="attention5">
+                        <div class='ng-modal-dialog'>
+                            <div class='ng-modal-dialog-content'>
+                                <span style="text-align: center"> Вы ничего не выбрали! </span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="button button-balanced order">
+                        <span> Оформить заказ </span>
+                    </button>
+                </div>
+                <!-- order list -->
+                <div style="overflow-y: scroll">
+                <ion-list show-delete="data.showDelete" >
+                    <ion-item ng-repeat="item in items" item="item" href="#/item/{{item}}" class="item-remove-animate">
+                        <div class="item item-thumbnail-right" style="border: none">
+                            <img ng-src="http://cafe.returnt.ru/{{item.img}}">
+                            <span class="name">Блюдо: {{ item.nameFood}}<br> </span>
+                            <span class="num">Кол-во: {{item.num}} шт. <br> </span>
+                            <span class="sumPrice">Цена: {{item.sumPrice}} руб. </span>
+                        </div>
+                        <ion-delete-button class="ion-close-circled" ng-click="onItemDelete(item.id)"></ion-delete-button>
+                    </ion-item>
+                </ion-list>
+                </div>
+            </form>
+        </ion-content>
+    </ion-pane>
+</div>

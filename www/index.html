@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="starter">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title></title>
+  <link href="css/full_description.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/menu.css">
+  <link href="css/basket.css" rel="stylesheet">
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
+  <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+<link rel="stylesheet" href="css/contacts.css">
+  <link rel="stylesheet" href="css/animate.css">
+
+  <script src="js/angular-route.min.js"></script>
+  <script src="cordova.js"></script>
+  <script src="js/app.js"></script>
+  <script src="lib/ionic/js/angular/angular-animate.min.js"></script>
+
+  <script src="js/full_description.js"></script>
+  <script src="js/list_foods.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/basket.js"></script>
+  <script src="js/contacts.js"></script>
+  <script src="js/about.js"></script>
+
+</head>
+<body ng-view>
+    <ion-pane class="background-fon">
+      <!-- content -->
+      <div class="glav-ekran">
+
+        <div class="l1">
+          <a href ="#/menu">
+            <button class="button button-outline button-balanced menu" style="font-size: 20px; border-color: 64FF46; color: #64FF46">Меню</button>
+          </a>
+        </div>
+
+        <div class="l2">
+          <a href ="#/contacts">
+            <button class="button button-outline button-balanced menu" style="font-size: 20px; border-color: #64FF46; color: #64FF46">Контактные данные</button>
+          </a>
+        </div>
+
+        <div class="l3">
+          <a href ="#/pro_nas">
+            <button class="button button-outline button-balanced menu" style="font-size: 20px; border-color: #64FF46; color: #64FF46">О нас</button>
+          </a>
+        </div>
+    </div>
+      <!-- end content --> 
+      </ion-pane>
+</body ng-view>
+</html>

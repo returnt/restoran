@@ -1,0 +1,79 @@
+<div ng-controller="description">
+    <ion-pane>
+        <ion-header-bar class="bar bar-header bar-balanced">
+            <!-- button back -->
+            <button class="back_button" ng-click="doTheBack()"> <i class="ion-arrow-left-a" style="font-size: 25px;"></i>
+            </button>
+            <!-- title from server -->
+            <h1 class="title" style="text-align: center">{{foods[0].cafe_foods_name}}</h1>
+            <a href="#/basket" class="button button-clear icon ion-ios-cart-outline" style="font-size: 25px; ">
+                <div class="badge badge-assertive" style="position: absolute; left: 0px;" ng-show="one">{{numColl}}</div>
+            </a>
+        </ion-header-bar>
+        <ion-content>
+            <div class="counterPlusPicture">
+                <!-- item item-text-wrap -->
+                <div class="blokPicture ">
+                    <img class="kartinka" ng-src="http://cafe.returnt.ru/{{foods[0].cafe_foods_image}}">
+                </div>
+                <div class="blokCounter " style="margin: auto;">
+                    <i class="btnUp button button-icon icon " style="height: 22%;"></i>
+                    <i class="btnUp button button-icon icon ion-chevron-up" style="height: 23%;" ng-click="btnUp()"></i>
+                    <div style="text-align: center; height: 10%;">
+                        <a class="numCounter">{{num}}</a>
+                    </div>
+                    <i class="btnDown button button-icon icon ion-chevron-down" style="height: 23%;" ng-click="btnDown()"></i>
+                    <i class="btnDown button button-icon icon " style="height: 22%;"></i>
+                </div>
+            </div>
+            <div style="text-align: center; margin: 0; font-size: 18px">
+                <span>
+                    Цена: <strong >{{foods[0].cafe_foods_price}} руб.</strong>
+                </span>
+            </div>
+            <div style="text-align: center; margin: 0; font-size: 18px">
+                <span>
+                    Количество: <strong >{{num}} шт.</strong>
+                </span>
+            </div>
+            <div style="text-align: center; margin: 0; font-size: 18px;">
+                <span>
+                    Стоимость:
+                    <strong>{{foods[0].cafe_foods_price*num}} руб.</strong>
+                </span>
+            </div>
+            <div class="textZaKnopkoy" ng-show="vkl">
+                <button class="button button-clear" style="width: 100%; font-size: 20px; position: absolute; color: #33cd5f; margin-top: 5%;">
+                    Добавлено в корзину!
+                </button>
+            </div>
+            <div style="text-align: center; ">
+                <button class="addInBasket button button-balanced " ng-click="saveOrder()" ng-class="{animated : qqw}" style="width: 80%; font-size: 20px; margin: 5%">
+                    <i class="ion-ios-cart-outline" style="margin-right: 2%;"></i> Добавить в корзину
+                </button>
+            </div>
+            <div>
+                <!-- <h3 style="margin: 4%">{{foods[0].cafe_foods_name}}</h3>
+                <div class="descriptionBluda">
+                    {{foods[0].cafe_foods_description}}
+                </div> -->
+                <!-- <div class="card">
+  <div class="item item-divider" style="center">
+    {{foods[0].cafe_foods_name}}
+  </div>
+  <div class="item item-text-wrap">
+    {{foods[0].cafe_foods_description}}
+  </div>
+</div> -->
+                <div class="list">
+                    <div class="item item-divider">
+                        {{foods[0].cafe_foods_name}}
+                    </div>
+                    <div class="item item-text-wrap">
+                        {{foods[0].cafe_foods_description}}
+                    </div>
+                </div>
+            </div>
+        </ion-content>
+    </ion-pane>
+</div>

@@ -1,0 +1,28 @@
+<div ng-controller="foodsCtrl">
+    <ion-pane>
+        <ion-header-bar class="bar bar-header bar-balanced">
+            <button class="back_button" ng-click="doTheBack()">
+                <i class="ion-arrow-left-a" style="font-size: 25px;"></i>
+            </button>
+            <h1 class="title" style="text-align: center; color: #ffffff; right: 42px;">{{foods[0].cafe_db_menu_menu}}</h1>
+            <a href="#/basket" class="button button-clear icon ion-ios-cart-outline" style="font-size: 25px">
+                <div class="badge badge-assertive" style="position: absolute; left: 0px;" ng-show="one">{{numColl}}</div>
+            </a>
+            <!-- <a href="#/basket"><button class="button button-clear icon ion-ios-cart-outline" style="font-size: 25px">
+      </button></a> -->
+        </ion-header-bar>
+        <ion-content>
+            <div class="list">
+                <a ng-repeat="item in foods" href="#/menu/dishes/{{item.cafe_foods_id_menu}}/{{item.cafe_foods_id}}" class="item item-thumbnail-left">
+                    <img ng-src="http://cafe.returnt.ru/{{ item.cafe_foods_image }}">
+                    <h2><b>{{ item.cafe_foods_name }}</b></h2>
+                    <h4>{{ item.cafe_foods_description }}</h4><br>
+                    <h3 style="color: #169900;"><strong>{{ item.cafe_foods_price }} руб</strong></h3>
+                    <!-- <button class="button button-balanced add_list" ng-click="saveOrder()"  style="margin-top:25px; float:left; font-size: 25px; z-index:1000">
+                <i class="icon ion-ios-cart-outline"></i>
+          </button> -->
+                </a>
+            </div>
+        </ion-content>
+    </ion-pane>
+</div>
